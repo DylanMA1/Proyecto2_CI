@@ -1,0 +1,74 @@
+package CUP;
+
+import java_cup.runtime.Symbol;
+
+// Declaración de tokens
+terminal INTEGER, FLOAT, BOOL, CHAR, STRING;
+terminal OPEN_BLOCK, CLOSE_BLOCK, OPEN_BRACKET, CLOSE_BRACKET, OPEN_PAREN, CLOSE_PAREN;
+terminal ASSIGN, END_STATEMENT;
+terminal PLUS, MINUS, MULTIPLY, DIVIDE, MODULO, POWER;
+terminal INCREMENT, DECREMENT;
+terminal LESS_THAN, LESS_EQUAL, GREATER_THAN, GREATER_EQUAL, EQUAL, NOT_EQUAL;
+terminal AND, OR, NOT;
+terminal IF, ELSE, WHILE, FOR, SWITCH, CASE, DEFAULT, BREAK, RETURN, COLON;
+terminal PRINT, READ;
+terminal IDENTIFIER, INT_LITERAL, FLOAT_LITERAL, BOOL_LITERAL, CHAR_LITERAL, STRING_LITERAL;
+terminal QUOTE, COMMA, MAIN;
+terminal FUNCTION_OR_VARIABLE;
+
+// Declaración de no terminales
+non terminal program;
+non terminal main_proc;
+non terminal statement_list;
+non terminal statement;
+non terminal expression;
+non terminal parameter_list;
+non terminal parameter;
+
+// Precedencia y asociatividad para operadores
+precedence left PLUS, MINUS;
+precedence left MULTIPLY, DIVIDE, MODULO;
+precedence left POWER;
+
+// Símbolo inicial
+start with program;
+
+// Reglas de gramática
+
+// Programa debe iniciar con el procedimiento main
+program ::= main_proc;
+
+// Regla para el procedimiento main
+main_proc ::= INTEGER MAIN OPEN_PAREN CLOSE_PAREN OPEN_BLOCK statement_list CLOSE_BLOCK
+            | FLOAT MAIN OPEN_PAREN CLOSE_PAREN OPEN_BLOCK statement_list CLOSE_BLOCK;
+
+// Lista de sentencias
+statement_list ::= statement_list statement
+                 | /* vacío */;
+
+// Reglas para sentencias
+statement ::= IF OPEN_BLOCK expression CLOSE_BLOCK statement_list CLOSE_BLOCK
+            | WHILE OPEN_BLOCK expression CLOSE_BLOCK statement_list CLOSE_BLOCK
+            | PRINT OPEN_PAREN parameter_list CLOSE_PAREN END_STATEMENT
+            | IDENTIFIER ASSIGN expression END_STATEMENT;
+
+// Manejo de parámetros (coma como separador)
+parameter_list ::= parameter
+                 | parameter_list COMMA parameter;
+
+parameter ::= expression;
+
+// Reglas para expresiones
+expression ::= expression PLUS expression
+             | expression MINUS expression
+             | expression MULTIPLY expression
+             | expression DIVIDE expression
+             | expression MODULO expression
+             | expression POWER expression
+             | INT_LITERAL
+             | FLOAT_LITERAL
+             | BOOL_LITERAL
+             | CHAR_LITERAL
+             | STRING_LITERAL
+             | IDENTIFIER
+             | OPEN_PAREN expression CLOSE_PAREN;
