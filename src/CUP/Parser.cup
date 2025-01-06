@@ -4,6 +4,7 @@ import java_cup.runtime.Symbol;
 
 // Declaración de tokens
 terminal INTEGER, FLOAT, BOOL, CHAR, STRING;
+terminal TRUE, FALSE;
 terminal OPEN_BLOCK, CLOSE_BLOCK, OPEN_BRACKET, CLOSE_BRACKET, OPEN_PAREN, CLOSE_PAREN;
 terminal ASSIGN, END_STATEMENT;
 terminal PLUS, MINUS, MULTIPLY, DIVIDE, MODULO, POWER;
@@ -24,51 +25,125 @@ non terminal statement;
 non terminal expression;
 non terminal parameter_list;
 non terminal parameter;
+non terminal miPrograma, funciones, funcion, encabezadoFunc, main, parametros, paramAux, parametro;
+non terminal bloque, tipos, sentencias, sentencia;
+non terminal creacion, creacionAsign, asignacion, literales;
+non terminal arreglo, accesoArreglo, asignacionArreglo;
+non terminal llamadaFuncion, argumentos, estructuraControl, io;
+non terminal ifElse, while, for, switch, casos, caso;
+non terminal expresion, termino;
+non terminal operadorAritmetico, operadorRelacional, operadorLogico, operadorUnario;
+non terminal booleano;
 
 // Precedencia y asociatividad para operadores
 precedence left PLUS, MINUS;
 precedence left MULTIPLY, DIVIDE, MODULO;
 precedence left POWER;
 
-// Símbolo inicial
-start with program;
-
 // Reglas de gramática
 
-// Programa debe iniciar con el procedimiento main
-program ::= main_proc;
+// Símbolo inicial
+start with miPrograma;
 
-// Regla para el procedimiento main
-main_proc ::= INTEGER MAIN OPEN_PAREN CLOSE_PAREN OPEN_BLOCK statement_list CLOSE_BLOCK
-            | FLOAT MAIN OPEN_PAREN CLOSE_PAREN OPEN_BLOCK statement_list CLOSE_BLOCK;
+// Reglas de gramática
+miPrograma ::= funciones main;
 
-// Lista de sentencias
-statement_list ::= statement_list statement
-                 | /* vacío */;
+funciones ::= funcion
+           | funciones funcion;
 
-// Reglas para sentencias
-statement ::= IF OPEN_BLOCK expression CLOSE_BLOCK statement_list CLOSE_BLOCK
-            | WHILE OPEN_BLOCK expression CLOSE_BLOCK statement_list CLOSE_BLOCK
-            | PRINT OPEN_PAREN parameter_list CLOSE_PAREN END_STATEMENT
-            | IDENTIFIER ASSIGN expression END_STATEMENT;
+funcion ::= encabezadoFunc bloque;
 
-// Manejo de parámetros (coma como separador)
-parameter_list ::= parameter
-                 | parameter_list COMMA parameter;
+encabezadoFunc ::= tipos IDENTIFIER parametros;
 
-parameter ::= expression;
+main ::= INTEGER MAIN OPEN_PAREN CLOSE_PAREN bloque;
 
-// Reglas para expresiones
-expression ::= expression PLUS expression
-             | expression MINUS expression
-             | expression MULTIPLY expression
-             | expression DIVIDE expression
-             | expression MODULO expression
-             | expression POWER expression
-             | INT_LITERAL
-             | FLOAT_LITERAL
-             | BOOL_LITERAL
-             | CHAR_LITERAL
-             | STRING_LITERAL
-             | IDENTIFIER
-             | OPEN_PAREN expression CLOSE_PAREN;
+parametros ::= OPEN_PAREN CLOSE_PAREN
+             | OPEN_PAREN paramAux CLOSE_PAREN;
+
+paramAux ::= parametro
+           | paramAux COMMA parametro;
+
+parametro ::= tipos IDENTIFIER;
+
+bloque ::= OPEN_BLOCK sentencias CLOSE_BLOCK;
+
+tipos ::= INTEGER
+       | FLOAT
+       | BOOL
+       | CHAR
+       | STRING;
+
+sentencias ::= sentencia
+             | sentencias sentencia;
+
+sentencia ::= creacion
+            | creacionAsign
+            | asignacion
+            | llamadaFuncion
+            | estructuraControl
+            | io;
+
+creacion ::= tipos IDENTIFIER END_STATEMENT;
+
+creacionAsign ::= tipos IDENTIFIER ASSIGN literales END_STATEMENT;
+
+asignacion ::= IDENTIFIER ASSIGN expresion END_STATEMENT;
+
+literales ::= INT_LITERAL
+            | FLOAT_LITERAL
+            | booleano
+            | STRING_LITERAL
+            | CHAR_LITERAL;
+
+arreglo ::= tipos IDENTIFIER OPEN_BRACKET INT_LITERAL CLOSE_BRACKET END_STATEMENT;
+
+accesoArreglo ::= IDENTIFIER OPEN_BRACKET INT_LITERAL CLOSE_BRACKET;
+
+asignacionArreglo ::= accesoArreglo ASSIGN expresion END_STATEMENT;
+
+llamadaFuncion ::= IDENTIFIER OPEN_PAREN argumentos CLOSE_PAREN END_STATEMENT;
+
+argumentos ::= expresion
+             | argumentos COMMA expresion;
+
+estructuraControl ::= ifElse
+                    | while
+                    | for
+                    | switch;
+
+ifElse ::= IF OPEN_PAREN expresion CLOSE_PAREN bloque ELSE bloque;
+
+while ::= WHILE OPEN_PAREN expresion CLOSE_PAREN bloque;
+
+for ::= FOR OPEN_PAREN asignacion COMMA expresion COMMA asignacion CLOSE_PAREN bloque;
+
+switch ::= SWITCH OPEN_PAREN expresion CLOSE_PAREN OPEN_BLOCK casos CLOSE_BLOCK;
+
+casos ::= caso
+        | casos caso;
+
+caso ::= CASE expresion COLON sentencias
+       | COLON sentencias DEFAULT;
+
+io ::= PRINT OPEN_PAREN expresion CLOSE_PAREN END_STATEMENT
+    | READ OPEN_PAREN IDENTIFIER CLOSE_PAREN END_STATEMENT;
+
+expresion ::= termino
+            | expresion operadorAritmetico termino
+            | expresion operadorRelacional termino
+            | expresion operadorLogico termino
+            | operadorUnario termino
+            | termino operadorUnario;
+
+operadorAritmetico ::= PLUS | MINUS | DIVIDE | MULTIPLY | MODULO | POWER;
+operadorRelacional ::= LESS_THAN | LESS_EQUAL | GREATER_THAN | GREATER_EQUAL | EQUAL | NOT_EQUAL;
+operadorLogico ::= AND | OR | NOT;
+operadorUnario ::= INCREMENT | DECREMENT ;
+
+termino ::= IDENTIFIER
+          | literales
+          | llamadaFuncion
+          | accesoArreglo
+          | OPEN_PAREN expresion CLOSE_PAREN;
+
+booleano ::= TRUE | FALSE;
