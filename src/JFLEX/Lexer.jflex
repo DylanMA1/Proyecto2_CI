@@ -103,8 +103,8 @@ public int getColumn() {
 "narra" { return new Symbol(sym.PRINT); }
 "escucha" { return new Symbol(sym.READ); }
 
-// Comillas
-"\"" { return new Symbol(sym.QUOTE); }
+// Cadenas
+\"[^\"]*\" {return new Symbol(sym.STRING_LITERAL, yytext().substring(1, yytext().length() - 1));}
 
 // Literales
 [0-9]+ { return new Symbol(sym.INT_LITERAL, Integer.parseInt(yytext())); }
@@ -120,7 +120,10 @@ _([a-zA-Z0-9]+)_ { return new Symbol(sym.IDENTIFIER, yytext()); }
 "," { return new Symbol(sym.COMMA); }
 
 // Llamadas a funciones o variables
-[a-zA-Z][a-zA-Z0-9_]* { return new Symbol(sym.FUNCTION_OR_VARIABLE, yytext()); }
+// [a-zA-Z][a-zA-Z0-9_]* { return new Symbol(sym.FUNCTION_OR_VARIABLE, yytext()); }
+
+// Manejo de palabras no reconocidas como un solo error
+[a-zA-Z][a-zA-Z0-9_]* {System.err.println("Error léxico: \"" + yytext() + "\" en línea " + yyline + ", columna " + yycolumn);}
 
 // Manejo de errores léxicos
 . {
