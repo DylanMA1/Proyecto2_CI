@@ -49,9 +49,11 @@ public class Main {
         }
 
         String archivoSalida = "salida.txt";
+        String archivoSimbolos = "salida_simbolos.txt";
 
         try (FileReader reader = new FileReader(archivo);
-             BufferedWriter writer = new BufferedWriter(new FileWriter(archivoSalida, false))) {
+             BufferedWriter writer = new BufferedWriter(new FileWriter(archivoSalida, false));
+             BufferedWriter simbolosWriter = new BufferedWriter(new FileWriter(archivoSimbolos, false))) {
 
             MultiOutputStream multiOut = new MultiOutputStream(System.out, writer);
             PrintStream printStream = new PrintStream(multiOut);
@@ -75,14 +77,14 @@ public class Main {
                     addToSymbolTable(token, tokenName, tipo, linea, columna);
 
                 } else {
-                    System.out.println("Análisis terminado: se alcanzó el final del archivo.");
+                    //System.out.println("Análisis terminado: se alcanzó el final del archivo.");
                     break;
                 }
             }
 
-            System.out.println("\nTabla de símbolos:");
             for (SymbolTableEntry entry : symbolTable) {
-                System.out.println(entry);
+                simbolosWriter.write(entry.toString());
+                simbolosWriter.newLine();
             }
 
         } catch (IOException e) {
