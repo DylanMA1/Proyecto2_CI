@@ -1,3 +1,4 @@
+import CUP.Parser;
 import java_cup.runtime.Symbol;
 import java.io.*;
 import java.nio.file.Files;
@@ -56,8 +57,13 @@ public class Main {
              BufferedWriter simbolosWriter = new BufferedWriter(new FileWriter(archivoSimbolos, false))) {
 
             MultiOutputStream multiOut = new MultiOutputStream(System.out, writer);
+            MultiOutputStream multiErr = new MultiOutputStream(System.err, writer);
+
             PrintStream printStream = new PrintStream(multiOut);
+            PrintStream printErr = new PrintStream(multiErr);
+
             System.setOut(printStream);
+            System.setErr(printErr);
 
             Lexer lexer = new Lexer(reader);
             Symbol token;
@@ -77,7 +83,6 @@ public class Main {
                     addToSymbolTable(token, tokenName, tipo, linea, columna);
 
                 } else {
-                    //System.out.println("Análisis terminado: se alcanzó el final del archivo.");
                     break;
                 }
             }
@@ -92,6 +97,8 @@ public class Main {
         } catch (Exception e) {
             System.err.println("Error durante el análisis léxico: " + e.getMessage());
         }
+
+
     }
 
     /**
