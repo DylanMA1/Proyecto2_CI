@@ -3,7 +3,7 @@ package CUP;
 import java_cup.runtime.Symbol;
 
 // Declaración de tokens
-terminal INTEGER, FLOAT, BOOL, CHAR, STRING;
+terminal INTEGER, FLOAT, BOOL, CHAR, STRING, INT_LITERAL, FLOAT_LITERAL, CHAR_LITERAL, STRING_LITERAL;
 terminal TRUE, FALSE;
 terminal OPEN_BLOCK, CLOSE_BLOCK, OPEN_BRACKET, CLOSE_BRACKET, OPEN_PAREN, CLOSE_PAREN;
 terminal ASSIGN, END_STATEMENT;
@@ -11,42 +11,35 @@ terminal PLUS, MINUS, MULTIPLY, DIVIDE, MODULO, POWER;
 terminal INCREMENT, DECREMENT;
 terminal LESS_THAN, LESS_EQUAL, GREATER_THAN, GREATER_EQUAL, EQUAL, NOT_EQUAL;
 terminal AND, OR, NOT;
-terminal IF, ELSE, WHILE, FOR, SWITCH, CASE, DEFAULT, BREAK, RETURN, COLON;
-terminal PRINT, READ;
-terminal IDENTIFIER, INT_LITERAL, FLOAT_LITERAL, BOOL_LITERAL, CHAR_LITERAL, STRING_LITERAL;
-terminal QUOTE, COMMA, MAIN;
-terminal FUNCTION_OR_VARIABLE;
+terminal IF, ELSE, WHILE, FOR, SWITCH, CASE, DEFAULT;
+terminal IDENTIFIER, MAIN, PRINT, READ, COLON, COMMA;
+terminal BOOL_LITERAL;
 
 // Declaración de no terminales
-non terminal program;
-non terminal main_proc;
-non terminal statement_list;
-non terminal statement;
-non terminal expression;
-non terminal parameter_list;
-non terminal parameter;
-non terminal miPrograma, funciones, funcion, encabezadoFunc, main, parametros, paramAux, parametro;
-non terminal bloque, tipos, sentencias, sentencia;
-non terminal creacion, creacionAsign, asignacion, literales;
-non terminal arreglo, accesoArreglo, asignacionArreglo;
-non terminal llamadaFuncion, argumentos, estructuraControl, io;
-non terminal ifElse, while, for, switch, casos, caso;
-non terminal expresion, termino;
-non terminal operadorAritmetico, operadorRelacional, operadorLogico, operadorUnario;
-non terminal booleano;
+non terminal program, expression, funciones, funcion, encabezadoFunc, main;
+non terminal parametros, paramAux, parametro, bloque, tipos, sentencias, sentencia;
+non terminal creacion, creacionAsign, asignacion, literales, arreglo, accesoArreglo;
+non terminal asignacionArreglo, llamadaFuncion, argumentos, estructuraControl;
+non terminal ifElse, while, for, switch, casos, caso, io, operadorAritmetico, operadorRelacional;
+non terminal operadorLogico, operadorUnario, termino, booleano;
+non terminal expressionLogica, expressionRelacional, expressionAritmetica, expressionUnaria;
 
-// Precedencia y asociatividad para operadores
+// Precedencia y asociatividad
+precedence left OR;
+precedence left AND;
+precedence left EQUAL, NOT_EQUAL;
+precedence left LESS_THAN, LESS_EQUAL, GREATER_THAN, GREATER_EQUAL;
 precedence left PLUS, MINUS;
 precedence left MULTIPLY, DIVIDE, MODULO;
-precedence left POWER;
-
-// Reglas de gramática
+precedence right POWER;
+precedence right NOT;
+precedence right INCREMENT, DECREMENT;
 
 // Símbolo inicial
-start with miPrograma;
+start with program;
 
-// Reglas de gramática
-miPrograma ::= funciones main;
+// Reglas de producción
+program ::= main funciones | funciones main;
 
 funciones ::= funcion
            | funciones funcion;
@@ -55,7 +48,7 @@ funcion ::= encabezadoFunc bloque;
 
 encabezadoFunc ::= tipos IDENTIFIER parametros;
 
-main ::= INTEGER MAIN OPEN_PAREN CLOSE_PAREN bloque;
+main ::= MAIN OPEN_PAREN CLOSE_PAREN bloque;
 
 parametros ::= OPEN_PAREN CLOSE_PAREN
              | OPEN_PAREN paramAux CLOSE_PAREN;
@@ -81,13 +74,15 @@ sentencia ::= creacion
             | asignacion
             | llamadaFuncion
             | estructuraControl
-            | io;
+            | io
+            | arreglo
+            | asignacionArreglo;
 
 creacion ::= tipos IDENTIFIER END_STATEMENT;
 
-creacionAsign ::= tipos IDENTIFIER ASSIGN literales END_STATEMENT;
+creacionAsign ::= tipos IDENTIFIER ASSIGN expression END_STATEMENT;
 
-asignacion ::= IDENTIFIER ASSIGN expresion END_STATEMENT;
+asignacion ::= IDENTIFIER ASSIGN expression END_STATEMENT;
 
 literales ::= INT_LITERAL
             | FLOAT_LITERAL
@@ -97,53 +92,67 @@ literales ::= INT_LITERAL
 
 arreglo ::= tipos IDENTIFIER OPEN_BRACKET INT_LITERAL CLOSE_BRACKET END_STATEMENT;
 
-accesoArreglo ::= IDENTIFIER OPEN_BRACKET INT_LITERAL CLOSE_BRACKET;
+accesoArreglo ::= IDENTIFIER OPEN_BRACKET expression CLOSE_BRACKET;
 
-asignacionArreglo ::= accesoArreglo ASSIGN expresion END_STATEMENT;
+asignacionArreglo ::= accesoArreglo ASSIGN expression END_STATEMENT;
 
-llamadaFuncion ::= IDENTIFIER OPEN_PAREN argumentos CLOSE_PAREN END_STATEMENT;
+llamadaFuncion ::= IDENTIFIER OPEN_PAREN argumentos CLOSE_PAREN END_STATEMENT
+                 | IDENTIFIER OPEN_PAREN CLOSE_PAREN END_STATEMENT;
 
-argumentos ::= expresion
-             | argumentos COMMA expresion;
+argumentos ::= expression
+             | argumentos COMMA expression;
 
 estructuraControl ::= ifElse
                     | while
                     | for
                     | switch;
 
-ifElse ::= IF OPEN_PAREN expresion CLOSE_PAREN bloque ELSE bloque;
+ifElse ::= IF OPEN_PAREN expression CLOSE_PAREN bloque ELSE bloque
+         | IF OPEN_PAREN expression CLOSE_PAREN bloque;
 
-while ::= WHILE OPEN_PAREN expresion CLOSE_PAREN bloque;
+while ::= WHILE OPEN_PAREN expression CLOSE_PAREN bloque;
 
-for ::= FOR OPEN_PAREN asignacion COMMA expresion COMMA asignacion CLOSE_PAREN bloque;
+for ::= FOR OPEN_PAREN asignacion COMMA expression COMMA asignacion CLOSE_PAREN bloque;
 
-switch ::= SWITCH OPEN_PAREN expresion CLOSE_PAREN OPEN_BLOCK casos CLOSE_BLOCK;
+switch ::= SWITCH OPEN_PAREN expression CLOSE_PAREN OPEN_BLOCK casos CLOSE_BLOCK;
 
 casos ::= caso
         | casos caso;
 
-caso ::= CASE expresion COLON sentencias
-       | COLON sentencias DEFAULT;
+caso ::= CASE expression COLON sentencias
+       | DEFAULT COLON sentencias;
 
-io ::= PRINT OPEN_PAREN expresion CLOSE_PAREN END_STATEMENT
+io ::= PRINT OPEN_PAREN expression CLOSE_PAREN END_STATEMENT
     | READ OPEN_PAREN IDENTIFIER CLOSE_PAREN END_STATEMENT;
-
-expresion ::= termino
-            | expresion operadorAritmetico termino
-            | expresion operadorRelacional termino
-            | expresion operadorLogico termino
-            | operadorUnario termino
-            | termino operadorUnario;
 
 operadorAritmetico ::= PLUS | MINUS | DIVIDE | MULTIPLY | MODULO | POWER;
 operadorRelacional ::= LESS_THAN | LESS_EQUAL | GREATER_THAN | GREATER_EQUAL | EQUAL | NOT_EQUAL;
 operadorLogico ::= AND | OR | NOT;
-operadorUnario ::= INCREMENT | DECREMENT ;
+operadorUnario ::= INCREMENT | DECREMENT;
 
 termino ::= IDENTIFIER
           | literales
           | llamadaFuncion
           | accesoArreglo
-          | OPEN_PAREN expresion CLOSE_PAREN;
+          | OPEN_PAREN expression CLOSE_PAREN;
 
-booleano ::= TRUE | FALSE;
+booleano ::= BOOL_LITERAL | TRUE | FALSE;
+
+// Declaración inicial
+expression ::= expressionLogica;
+
+expressionLogica ::= expressionRelacional
+                   | expressionLogica operadorLogico expressionRelacional;
+
+expressionRelacional ::= expressionAritmetica
+                       | expressionRelacional operadorRelacional expressionAritmetica;
+
+expressionAritmetica ::= expressionUnaria
+                       | expressionAritmetica operadorAritmetico expressionUnaria;
+
+expressionUnaria ::= operadorUnario termino
+                   | termino;
+
+// Manejo de errores
+//expression ::= error {: System.err.println("Error en la expresión."); :};
+termino ::= error {: System.err.println("Error en el término."); :};
