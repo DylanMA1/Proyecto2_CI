@@ -8,62 +8,60 @@ package CUP;
 /** CUP generated class containing symbol constants. */
 public class sym {
   /* terminals */
-  public static final int DIVIDE = 20;
-  public static final int STRING_LITERAL = 51;
-  public static final int OPEN_PAREN = 13;
-  public static final int POWER = 22;
-  public static final int INCREMENT = 23;
+  public static final int DIVIDE = 24;
+  public static final int STRING_LITERAL = 10;
+  public static final int OPEN_PAREN = 17;
+  public static final int POWER = 26;
+  public static final int INCREMENT = 27;
   public static final int CHAR = 5;
-  public static final int CHAR_LITERAL = 50;
-  public static final int CASE = 39;
-  public static final int NOT_EQUAL = 30;
+  public static final int CHAR_LITERAL = 9;
+  public static final int CASE = 43;
+  public static final int NOT_EQUAL = 34;
   public static final int INTEGER = 2;
-  public static final int FOR = 37;
-  public static final int MINUS = 18;
-  public static final int DECREMENT = 24;
-  public static final int GREATER_THAN = 27;
-  public static final int NOT = 33;
-  public static final int AND = 31;
-  public static final int CLOSE_PAREN = 14;
-  public static final int OR = 32;
-  public static final int COMMA = 53;
+  public static final int FOR = 41;
+  public static final int MINUS = 22;
+  public static final int DECREMENT = 28;
+  public static final int GREATER_THAN = 31;
+  public static final int NOT = 37;
+  public static final int AND = 35;
+  public static final int CLOSE_PAREN = 18;
+  public static final int OR = 36;
+  public static final int COMMA = 50;
   public static final int BOOL = 4;
-  public static final int LESS_EQUAL = 26;
-  public static final int OPEN_BLOCK = 9;
-  public static final int PLUS = 17;
-  public static final int MULTIPLY = 19;
-  public static final int MAIN = 54;
-  public static final int QUOTE = 52;
-  public static final int ASSIGN = 15;
-  public static final int IF = 34;
+  public static final int LESS_EQUAL = 30;
+  public static final int OPEN_BLOCK = 13;
+  public static final int PLUS = 21;
+  public static final int MULTIPLY = 23;
+  public static final int MAIN = 46;
+  public static final int IF = 38;
+  public static final int ASSIGN = 19;
   public static final int EOF = 0;
-  public static final int RETURN = 42;
-  public static final int EQUAL = 29;
-  public static final int TRUE = 7;
-  public static final int GREATER_EQUAL = 28;
+  public static final int RETURN = 52;
+  public static final int EQUAL = 33;
+  public static final int TRUE = 11;
+  public static final int GREATER_EQUAL = 32;
   public static final int error = 1;
-  public static final int MODULO = 21;
-  public static final int CLOSE_BRACKET = 12;
-  public static final int BREAK = 41;
-  public static final int OPEN_BRACKET = 11;
-  public static final int END_STATEMENT = 16;
-  public static final int SWITCH = 38;
-  public static final int COLON = 43;
-  public static final int ELSE = 35;
-  public static final int CLOSE_BLOCK = 10;
-  public static final int READ = 45;
-  public static final int WHILE = 36;
-  public static final int DEFAULT = 40;
+  public static final int MODULO = 25;
+  public static final int CLOSE_BRACKET = 16;
+  public static final int BREAK = 53;
+  public static final int OPEN_BRACKET = 15;
+  public static final int END_STATEMENT = 20;
+  public static final int SWITCH = 42;
+  public static final int COLON = 49;
+  public static final int ELSE = 39;
+  public static final int CLOSE_BLOCK = 14;
+  public static final int READ = 48;
+  public static final int WHILE = 40;
+  public static final int DEFAULT = 44;
   public static final int FLOAT = 3;
-  public static final int FUNCTION_OR_VARIABLE = 55;
   public static final int STRING = 6;
-  public static final int FLOAT_LITERAL = 48;
-  public static final int FALSE = 8;
-  public static final int LESS_THAN = 25;
-  public static final int BOOL_LITERAL = 49;
-  public static final int PRINT = 44;
-  public static final int INT_LITERAL = 47;
-  public static final int IDENTIFIER = 46;
+  public static final int FLOAT_LITERAL = 8;
+  public static final int FALSE = 12;
+  public static final int LESS_THAN = 29;
+  public static final int BOOL_LITERAL = 51;
+  public static final int PRINT = 47;
+  public static final int INT_LITERAL = 7;
+  public static final int IDENTIFIER = 45;
   public static final String[] terminalNames = new String[] {
   "EOF",
   "error",
@@ -72,6 +70,10 @@ public class sym {
   "BOOL",
   "CHAR",
   "STRING",
+  "INT_LITERAL",
+  "FLOAT_LITERAL",
+  "CHAR_LITERAL",
+  "STRING_LITERAL",
   "TRUE",
   "FALSE",
   "OPEN_BLOCK",
@@ -106,21 +108,15 @@ public class sym {
   "SWITCH",
   "CASE",
   "DEFAULT",
-  "BREAK",
-  "RETURN",
-  "COLON",
+  "IDENTIFIER",
+  "MAIN",
   "PRINT",
   "READ",
-  "IDENTIFIER",
-  "INT_LITERAL",
-  "FLOAT_LITERAL",
-  "BOOL_LITERAL",
-  "CHAR_LITERAL",
-  "STRING_LITERAL",
-  "QUOTE",
+  "COLON",
   "COMMA",
-  "MAIN",
-  "FUNCTION_OR_VARIABLE"
+  "BOOL_LITERAL",
+  "RETURN",
+  "BREAK"
   };
 }
 

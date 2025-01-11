@@ -92,13 +92,34 @@ public class Main {
                 simbolosWriter.newLine();
             }
 
+            // Validar si el archivo cumple con la gramática
+            validateSyntax(archivo);
+
         } catch (IOException e) {
             System.err.println("Error al leer o escribir archivos: " + e.getMessage());
         } catch (Exception e) {
-            System.err.println("Error durante el análisis léxico: " + e.getMessage());
+            System.err.println("Error durante el análisis léxico o sintáctico: " + e.getMessage());
         }
 
+    }
 
+    /**
+     * Valida si el archivo cumple con la gramática definida en el parser.
+     *
+     * @param filePath Ruta del archivo a validar.
+     */
+    private static void validateSyntax(String filePath) {
+        try (FileReader reader = new FileReader(filePath)) {
+            Lexer lexer = new Lexer(reader);
+            Parser parser = new Parser(lexer);
+            parser.parse();
+            System.out.println("El archivo es válido según la gramática definida.");
+        } catch (Exception e) {
+            System.err.println("Error de análisis sintáctico: " + e.getMessage());
+            if (e.getCause() != null) {
+                System.err.println("Causa del error: " + e.getCause());
+            }
+        }
     }
 
     /**
