@@ -1,36 +1,169 @@
-Token: MAIN, Tipo: main, Línea: 1, Columna: 1
-Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 1, Columna: 10
-Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 1, Columna: 21
-Token: OPEN_BLOCK, Tipo: Sin tipo, Línea: 3, Columna: 1
-Token: INTEGER, Tipo: int, Línea: 5, Columna: 5
-Token: IDENTIFIER, Tipo: variable, Línea: 5, Columna: 13
-Token: ASSIGN, Tipo: Sin tipo, Línea: 5, Columna: 20
-Token: INT_LITERAL, Tipo: Sin tipo, Línea: 5, Columna: 28
-Token: END_STATEMENT, Tipo: Sin tipo, Línea: 5, Columna: 30
-Token: IDENTIFIER, Tipo: variable, Línea: 6, Columna: 5
-Token: ASSIGN, Tipo: Sin tipo, Línea: 6, Columna: 12
-Token: INT_LITERAL, Tipo: Sin tipo, Línea: 6, Columna: 20
-Token: END_STATEMENT, Tipo: Sin tipo, Línea: 6, Columna: 23
-Token: IF, Tipo: Sin tipo, Línea: 8, Columna: 5
-Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 8, Columna: 10
-Token: IDENTIFIER, Tipo: variable, Línea: 8, Columna: 21
-Token: LESS_THAN, Tipo: Sin tipo, Línea: 8, Columna: 28
-Token: INT_LITERAL, Tipo: Sin tipo, Línea: 8, Columna: 37
-Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 8, Columna: 40
-Token: OPEN_BLOCK, Tipo: Sin tipo, Línea: 9, Columna: 5
-Token: PRINT, Tipo: Sin tipo, Línea: 10, Columna: 9
-Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 10, Columna: 15
-Token: STRING_LITERAL, Tipo: Sin tipo, Línea: 10, Columna: 26
-Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 10, Columna: 49
-Token: END_STATEMENT, Tipo: Sin tipo, Línea: 10, Columna: 62
-Token: CLOSE_BLOCK, Tipo: Sin tipo, Línea: 11, Columna: 5
-Token: ELSE, Tipo: Sin tipo, Línea: 12, Columna: 5
-Token: OPEN_BLOCK, Tipo: Sin tipo, Línea: 13, Columna: 5
-Token: PRINT, Tipo: Sin tipo, Línea: 14, Columna: 9
-Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 14, Columna: 15
-Token: STRING_LITERAL, Tipo: Sin tipo, Línea: 14, Columna: 26
-Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 14, Columna: 49
-Token: END_STATEMENT, Tipo: Sin tipo, Línea: 14, Columna: 62
-Token: CLOSE_BLOCK, Tipo: Sin tipo, Línea: 15, Columna: 5
-Token: CLOSE_BLOCK, Tipo: Sin tipo, Línea: 17, Columna: 1
+Token: FLOAT, Tipo: float, Línea: 3, Columna: 1
+Token: IDENTIFIER, Tipo: variable, Línea: 3, Columna: 10
+Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 3, Columna: 18
+Token: CHAR, Tipo: char, Línea: 3, Columna: 29
+Token: IDENTIFIER, Tipo: variable, Línea: 3, Columna: 36
+Token: COMMA, Tipo: Sin tipo, Línea: 3, Columna: 42
+Token: CHAR, Tipo: char, Línea: 3, Columna: 44
+Token: IDENTIFIER, Tipo: variable, Línea: 3, Columna: 51
+Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 3, Columna: 57
+Token: OPEN_BLOCK, Tipo: Sin tipo, Línea: 4, Columna: 1
+Token: CHAR, Tipo: char, Línea: 5, Columna: 5
+Token: IDENTIFIER, Tipo: variable, Línea: 5, Columna: 12
+Token: ASSIGN, Tipo: Sin tipo, Línea: 5, Columna: 21
+Token: CHAR_LITERAL, Tipo: Sin tipo, Línea: 5, Columna: 29
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 5, Columna: 33
+Token: STRING, Tipo: string, Línea: 6, Columna: 5
+Token: IDENTIFIER, Tipo: variable, Línea: 6, Columna: 12
+Token: ASSIGN, Tipo: Sin tipo, Línea: 6, Columna: 19
+Token: STRING_LITERAL, Tipo: Sin tipo, Línea: 6, Columna: 27
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 6, Columna: 66
+Token: FLOAT, Tipo: float, Línea: 7, Columna: 5
+Token: IDENTIFIER, Tipo: variable, Línea: 7, Columna: 14
+Token: ASSIGN, Tipo: Sin tipo, Línea: 7, Columna: 20
+Token: FLOAT_LITERAL, Tipo: Sin tipo, Línea: 7, Columna: 28
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 7, Columna: 33
+Token: INTEGER, Tipo: int, Línea: 9, Columna: 5
+Token: IDENTIFIER, Tipo: variable, Línea: 9, Columna: 13
+Token: ASSIGN, Tipo: Sin tipo, Línea: 9, Columna: 19
+Token: INT_LITERAL, Tipo: Sin tipo, Línea: 9, Columna: 27
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 9, Columna: 29
+Token: IDENTIFIER, Tipo: variable, Línea: 15, Columna: 5
+Token: OPEN_BRACKET, Tipo: Sin tipo, Línea: 15, Columna: 11
+Token: IDENTIFIER, Tipo: variable, Línea: 15, Columna: 23
+Token: CLOSE_BRACKET, Tipo: Sin tipo, Línea: 15, Columna: 29
+Token: ASSIGN, Tipo: Sin tipo, Línea: 15, Columna: 43
+Token: CHAR_LITERAL, Tipo: Sin tipo, Línea: 15, Columna: 51
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 15, Columna: 55
+Token: BOOL, Tipo: bool, Línea: 17, Columna: 5
+Token: IDENTIFIER, Tipo: variable, Línea: 17, Columna: 12
+Token: ASSIGN, Tipo: Sin tipo, Línea: 17, Columna: 21
+Token: BOOL_LITERAL, Tipo: Sin tipo, Línea: 17, Columna: 29
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 17, Columna: 34
+Token: IDENTIFIER, Tipo: variable, Línea: 18, Columna: 5
+Token: ASSIGN, Tipo: Sin tipo, Línea: 18, Columna: 14
+Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 18, Columna: 22
+Token: FLOAT_LITERAL, Tipo: Sin tipo, Línea: 18, Columna: 33
+Token: MULTIPLY, Tipo: Sin tipo, Línea: 18, Columna: 37
+Token: IDENTIFIER, Tipo: variable, Línea: 18, Columna: 48
+Token: INCREMENT, Tipo: Sin tipo, Línea: 18, Columna: 54
+Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 18, Columna: 60
+Token: LESS_THAN, Tipo: Sin tipo, Línea: 18, Columna: 73
+Token: INT_LITERAL, Tipo: Sin tipo, Línea: 18, Columna: 82
+Token: AND, Tipo: Sin tipo, Línea: 18, Columna: 85
+Token: BOOL_LITERAL, Tipo: Sin tipo, Línea: 18, Columna: 93
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 18, Columna: 98
+Token: FOR, Tipo: Sin tipo, Línea: 20, Columna: 5
+Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 20, Columna: 12
+Token: IDENTIFIER, Tipo: variable, Línea: 20, Columna: 23
+Token: ASSIGN, Tipo: Sin tipo, Línea: 20, Columna: 27
+Token: INT_LITERAL, Tipo: Sin tipo, Línea: 20, Columna: 35
+Token: COMMA, Tipo: Sin tipo, Línea: 20, Columna: 38
+Token: IDENTIFIER, Tipo: variable, Línea: 20, Columna: 40
+Token: LESS_THAN, Tipo: Sin tipo, Línea: 20, Columna: 44
+Token: INT_LITERAL, Tipo: Sin tipo, Línea: 20, Columna: 53
+Token: MULTIPLY, Tipo: Sin tipo, Línea: 20, Columna: 56
+Token: INT_LITERAL, Tipo: Sin tipo, Línea: 20, Columna: 67
+Token: COMMA, Tipo: Sin tipo, Línea: 20, Columna: 69
+Token: IDENTIFIER, Tipo: variable, Línea: 20, Columna: 71
+Token: INCREMENT, Tipo: Sin tipo, Línea: 20, Columna: 75
+Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 20, Columna: 81
+Token: OPEN_BLOCK, Tipo: Sin tipo, Línea: 21, Columna: 5
+Token: WHILE, Tipo: Sin tipo, Línea: 23, Columna: 9
+Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 23, Columna: 18
+Token: IDENTIFIER, Tipo: variable, Línea: 23, Columna: 29
+Token: GREATER_THAN, Tipo: Sin tipo, Línea: 23, Columna: 36
+Token: FLOAT_LITERAL, Tipo: Sin tipo, Línea: 23, Columna: 44
+Token: OR, Tipo: Sin tipo, Línea: 23, Columna: 49
+Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 23, Columna: 56
+Token: INT_LITERAL, Tipo: Sin tipo, Línea: 23, Columna: 67
+Token: PLUS, Tipo: Sin tipo, Línea: 23, Columna: 70
+Token: INT_LITERAL, Tipo: Sin tipo, Línea: 23, Columna: 78
+Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 23, Columna: 81
+Token: GREATER_THAN, Tipo: Sin tipo, Línea: 23, Columna: 94
+Token: INT_LITERAL, Tipo: Sin tipo, Línea: 23, Columna: 102
+Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 23, Columna: 105
+Token: OPEN_BLOCK, Tipo: Sin tipo, Línea: 24, Columna: 9
+Token: IDENTIFIER, Tipo: variable, Línea: 25, Columna: 13
+Token: ASSIGN, Tipo: Sin tipo, Línea: 25, Columna: 19
+Token: IDENTIFIER, Tipo: variable, Línea: 25, Columna: 27
+Token: MINUS, Tipo: Sin tipo, Línea: 25, Columna: 33
+Token: INT_LITERAL, Tipo: Sin tipo, Línea: 25, Columna: 45
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 25, Columna: 47
+Token: RETURN, Tipo: Sin tipo, Línea: 26, Columna: 13
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 26, Columna: 19
+Token: CLOSE_BLOCK, Tipo: Sin tipo, Línea: 27, Columna: 9
+Token: IF, Tipo: Sin tipo, Línea: 30, Columna: 9
+Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 30, Columna: 14
+Token: IDENTIFIER, Tipo: variable, Línea: 30, Columna: 25
+Token: EQUAL, Tipo: Sin tipo, Línea: 30, Columna: 31
+Token: INT_LITERAL, Tipo: Sin tipo, Línea: 30, Columna: 36
+Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 30, Columna: 38
+Token: OPEN_BLOCK, Tipo: Sin tipo, Línea: 31, Columna: 9
+Token: RETURN, Tipo: Sin tipo, Línea: 32, Columna: 13
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 32, Columna: 19
+Token: CLOSE_BLOCK, Tipo: Sin tipo, Línea: 33, Columna: 9
+Token: ELSE, Tipo: Sin tipo, Línea: 34, Columna: 9
+Token: OPEN_BLOCK, Tipo: Sin tipo, Línea: 35, Columna: 9
+Token: RETURN, Tipo: Sin tipo, Línea: 36, Columna: 13
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 36, Columna: 19
+Token: CLOSE_BLOCK, Tipo: Sin tipo, Línea: 37, Columna: 9
+Token: SWITCH, Tipo: Sin tipo, Línea: 40, Columna: 9
+Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 40, Columna: 16
+Token: IDENTIFIER, Tipo: variable, Línea: 40, Columna: 27
+Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 40, Columna: 32
+Token: OPEN_BLOCK, Tipo: Sin tipo, Línea: 41, Columna: 9
+Token: CASE, Tipo: Sin tipo, Línea: 42, Columna: 13
+Token: INT_LITERAL, Tipo: Sin tipo, Línea: 42, Columna: 22
+Token: COLON, Tipo: Sin tipo, Línea: 42, Columna: 24
+Token: IDENTIFIER, Tipo: variable, Línea: 42, Columna: 30
+Token: INCREMENT, Tipo: Sin tipo, Línea: 42, Columna: 35
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 42, Columna: 41
+Token: CASE, Tipo: Sin tipo, Línea: 43, Columna: 13
+Token: INT_LITERAL, Tipo: Sin tipo, Línea: 43, Columna: 22
+Token: COLON, Tipo: Sin tipo, Línea: 43, Columna: 24
+Token: IDENTIFIER, Tipo: variable, Línea: 43, Columna: 30
+Token: DECREMENT, Tipo: Sin tipo, Línea: 43, Columna: 35
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 43, Columna: 42
+Token: DEFAULT, Tipo: Sin tipo, Línea: 44, Columna: 13
+Token: COLON, Tipo: Sin tipo, Línea: 44, Columna: 20
+Token: IDENTIFIER, Tipo: variable, Línea: 44, Columna: 26
+Token: ASSIGN, Tipo: Sin tipo, Línea: 44, Columna: 31
+Token: IDENTIFIER, Tipo: variable, Línea: 44, Columna: 39
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 44, Columna: 44
+Token: RETURN, Tipo: Sin tipo, Línea: 45, Columna: 13
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 45, Columna: 19
+Token: CLOSE_BLOCK, Tipo: Sin tipo, Línea: 47, Columna: 9
+Token: CLOSE_BLOCK, Tipo: Sin tipo, Línea: 48, Columna: 5
+Token: RETURN, Tipo: Sin tipo, Línea: 49, Columna: 5
+Token: INT_LITERAL, Tipo: Sin tipo, Línea: 49, Columna: 11
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 49, Columna: 13
+Token: CLOSE_BLOCK, Tipo: Sin tipo, Línea: 50, Columna: 1
+Token: MAIN, Tipo: main, Línea: 53, Columna: 1
+Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 53, Columna: 10
+Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 53, Columna: 21
+Token: OPEN_BLOCK, Tipo: Sin tipo, Línea: 53, Columna: 34
+Token: READ, Tipo: Sin tipo, Línea: 59, Columna: 1
+Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 59, Columna: 9
+Token: IDENTIFIER, Tipo: variable, Línea: 59, Columna: 20
+Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 59, Columna: 25
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 59, Columna: 38
+Token: PRINT, Tipo: Sin tipo, Línea: 61, Columna: 1
+Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 61, Columna: 7
+Token: IDENTIFIER, Tipo: variable, Línea: 61, Columna: 18
+Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 61, Columna: 23
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 61, Columna: 36
+Token: IDENTIFIER, Tipo: variable, Línea: 63, Columna: 1
+Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 63, Columna: 10
+Token: IDENTIFIER, Tipo: variable, Línea: 63, Columna: 21
+Token: OPEN_PAREN, Tipo: Sin tipo, Línea: 63, Columna: 30
+Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 63, Columna: 41
+Token: COMMA, Tipo: Sin tipo, Línea: 63, Columna: 54
+Token: CHAR_LITERAL, Tipo: Sin tipo, Línea: 63, Columna: 55
+Token: CLOSE_PAREN, Tipo: Sin tipo, Línea: 63, Columna: 59
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 63, Columna: 72
+Token: RETURN, Tipo: Sin tipo, Línea: 64, Columna: 1
+Token: IDENTIFIER, Tipo: variable, Línea: 64, Columna: 7
+Token: END_STATEMENT, Tipo: Sin tipo, Línea: 64, Columna: 13
+Token: CLOSE_BLOCK, Tipo: Sin tipo, Línea: 66, Columna: 1
 El archivo es válido según la gramática definida.

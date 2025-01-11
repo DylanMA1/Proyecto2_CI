@@ -1,35 +1,168 @@
-Símbolo: MAIN, Valor: null, Tipo: main, Línea: 1, Columna: 1
-Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 1, Columna: 10
-Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 1, Columna: 21
-Símbolo: OPEN_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 3, Columna: 1
-Símbolo: INTEGER, Valor: null, Tipo: int, Línea: 5, Columna: 5
-Símbolo: IDENTIFIER, Valor: _edad_, Tipo: variable, Línea: 5, Columna: 13
-Símbolo: ASSIGN, Valor: null, Tipo: Sin tipo, Línea: 5, Columna: 20
-Símbolo: INT_LITERAL, Valor: 0, Tipo: Sin tipo, Línea: 5, Columna: 28
-Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 5, Columna: 30
-Símbolo: IDENTIFIER, Valor: _edad_, Tipo: variable, Línea: 6, Columna: 5
-Símbolo: ASSIGN, Valor: null, Tipo: Sin tipo, Línea: 6, Columna: 12
-Símbolo: INT_LITERAL, Valor: 25, Tipo: Sin tipo, Línea: 6, Columna: 20
-Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 6, Columna: 23
-Símbolo: IF, Valor: null, Tipo: Sin tipo, Línea: 8, Columna: 5
-Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 8, Columna: 10
-Símbolo: IDENTIFIER, Valor: _edad_, Tipo: variable, Línea: 8, Columna: 21
-Símbolo: LESS_THAN, Valor: null, Tipo: Sin tipo, Línea: 8, Columna: 28
-Símbolo: INT_LITERAL, Valor: 30, Tipo: Sin tipo, Línea: 8, Columna: 37
-Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 8, Columna: 40
-Símbolo: OPEN_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 9, Columna: 5
-Símbolo: PRINT, Valor: null, Tipo: Sin tipo, Línea: 10, Columna: 9
-Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 10, Columna: 15
-Símbolo: STRING_LITERAL, Valor: Es menor de 30 años., Tipo: Sin tipo, Línea: 10, Columna: 26
-Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 10, Columna: 49
-Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 10, Columna: 62
-Símbolo: CLOSE_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 11, Columna: 5
-Símbolo: ELSE, Valor: null, Tipo: Sin tipo, Línea: 12, Columna: 5
-Símbolo: OPEN_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 13, Columna: 5
-Símbolo: PRINT, Valor: null, Tipo: Sin tipo, Línea: 14, Columna: 9
-Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 14, Columna: 15
-Símbolo: STRING_LITERAL, Valor: Tiene 30 años o más., Tipo: Sin tipo, Línea: 14, Columna: 26
-Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 14, Columna: 49
-Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 14, Columna: 62
-Símbolo: CLOSE_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 15, Columna: 5
-Símbolo: CLOSE_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 17, Columna: 1
+Símbolo: FLOAT, Valor: null, Tipo: float, Línea: 3, Columna: 1
+Símbolo: IDENTIFIER, Valor: _func1_, Tipo: variable, Línea: 3, Columna: 10
+Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 3, Columna: 18
+Símbolo: CHAR, Valor: null, Tipo: char, Línea: 3, Columna: 29
+Símbolo: IDENTIFIER, Valor: _x22_, Tipo: variable, Línea: 3, Columna: 36
+Símbolo: COMMA, Valor: null, Tipo: Sin tipo, Línea: 3, Columna: 42
+Símbolo: CHAR, Valor: null, Tipo: char, Línea: 3, Columna: 44
+Símbolo: IDENTIFIER, Valor: _x22_, Tipo: variable, Línea: 3, Columna: 51
+Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 3, Columna: 57
+Símbolo: OPEN_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 4, Columna: 1
+Símbolo: CHAR, Valor: null, Tipo: char, Línea: 5, Columna: 5
+Símbolo: IDENTIFIER, Valor: _miChar_, Tipo: variable, Línea: 5, Columna: 12
+Símbolo: ASSIGN, Valor: null, Tipo: Sin tipo, Línea: 5, Columna: 21
+Símbolo: CHAR_LITERAL, Valor: !, Tipo: Sin tipo, Línea: 5, Columna: 29
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 5, Columna: 33
+Símbolo: STRING, Valor: null, Tipo: string, Línea: 6, Columna: 5
+Símbolo: IDENTIFIER, Valor: _str1_, Tipo: variable, Línea: 6, Columna: 12
+Símbolo: ASSIGN, Valor: null, Tipo: Sin tipo, Línea: 6, Columna: 19
+Símbolo: STRING_LITERAL, Valor: Hola $%&/gaspar$& cierraregalo mundo, Tipo: Sin tipo, Línea: 6, Columna: 27
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 6, Columna: 66
+Símbolo: FLOAT, Valor: null, Tipo: float, Línea: 7, Columna: 5
+Símbolo: IDENTIFIER, Valor: _fl1_, Tipo: variable, Línea: 7, Columna: 14
+Símbolo: ASSIGN, Valor: null, Tipo: Sin tipo, Línea: 7, Columna: 20
+Símbolo: FLOAT_LITERAL, Valor: 56.6, Tipo: Sin tipo, Línea: 7, Columna: 28
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 7, Columna: 33
+Símbolo: INTEGER, Valor: null, Tipo: int, Línea: 9, Columna: 5
+Símbolo: IDENTIFIER, Valor: _lit_, Tipo: variable, Línea: 9, Columna: 13
+Símbolo: ASSIGN, Valor: null, Tipo: Sin tipo, Línea: 9, Columna: 19
+Símbolo: INT_LITERAL, Valor: 2, Tipo: Sin tipo, Línea: 9, Columna: 27
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 9, Columna: 29
+Símbolo: IDENTIFIER, Valor: _arr_, Tipo: variable, Línea: 15, Columna: 5
+Símbolo: OPEN_BRACKET, Valor: null, Tipo: Sin tipo, Línea: 15, Columna: 11
+Símbolo: IDENTIFIER, Valor: _lit_, Tipo: variable, Línea: 15, Columna: 23
+Símbolo: CLOSE_BRACKET, Valor: null, Tipo: Sin tipo, Línea: 15, Columna: 29
+Símbolo: ASSIGN, Valor: null, Tipo: Sin tipo, Línea: 15, Columna: 43
+Símbolo: CHAR_LITERAL, Valor: c, Tipo: Sin tipo, Línea: 15, Columna: 51
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 15, Columna: 55
+Símbolo: BOOL, Valor: null, Tipo: bool, Línea: 17, Columna: 5
+Símbolo: IDENTIFIER, Valor: _mibool_, Tipo: variable, Línea: 17, Columna: 12
+Símbolo: ASSIGN, Valor: null, Tipo: Sin tipo, Línea: 17, Columna: 21
+Símbolo: BOOL_LITERAL, Valor: true, Tipo: Sin tipo, Línea: 17, Columna: 29
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 17, Columna: 34
+Símbolo: IDENTIFIER, Valor: _mibool_, Tipo: variable, Línea: 18, Columna: 5
+Símbolo: ASSIGN, Valor: null, Tipo: Sin tipo, Línea: 18, Columna: 14
+Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 18, Columna: 22
+Símbolo: FLOAT_LITERAL, Valor: 3.7, Tipo: Sin tipo, Línea: 18, Columna: 33
+Símbolo: MULTIPLY, Valor: null, Tipo: Sin tipo, Línea: 18, Columna: 37
+Símbolo: IDENTIFIER, Valor: _fl1_, Tipo: variable, Línea: 18, Columna: 48
+Símbolo: INCREMENT, Valor: null, Tipo: Sin tipo, Línea: 18, Columna: 54
+Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 18, Columna: 60
+Símbolo: LESS_THAN, Valor: null, Tipo: Sin tipo, Línea: 18, Columna: 73
+Símbolo: INT_LITERAL, Valor: 56, Tipo: Sin tipo, Línea: 18, Columna: 82
+Símbolo: AND, Valor: null, Tipo: Sin tipo, Línea: 18, Columna: 85
+Símbolo: BOOL_LITERAL, Valor: true, Tipo: Sin tipo, Línea: 18, Columna: 93
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 18, Columna: 98
+Símbolo: FOR, Valor: null, Tipo: Sin tipo, Línea: 20, Columna: 5
+Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 20, Columna: 12
+Símbolo: IDENTIFIER, Valor: _i_, Tipo: variable, Línea: 20, Columna: 23
+Símbolo: ASSIGN, Valor: null, Tipo: Sin tipo, Línea: 20, Columna: 27
+Símbolo: INT_LITERAL, Valor: 10, Tipo: Sin tipo, Línea: 20, Columna: 35
+Símbolo: COMMA, Valor: null, Tipo: Sin tipo, Línea: 20, Columna: 38
+Símbolo: IDENTIFIER, Valor: _i_, Tipo: variable, Línea: 20, Columna: 40
+Símbolo: LESS_THAN, Valor: null, Tipo: Sin tipo, Línea: 20, Columna: 44
+Símbolo: INT_LITERAL, Valor: 30, Tipo: Sin tipo, Línea: 20, Columna: 53
+Símbolo: MULTIPLY, Valor: null, Tipo: Sin tipo, Línea: 20, Columna: 56
+Símbolo: INT_LITERAL, Valor: 2, Tipo: Sin tipo, Línea: 20, Columna: 67
+Símbolo: COMMA, Valor: null, Tipo: Sin tipo, Línea: 20, Columna: 69
+Símbolo: IDENTIFIER, Valor: _i_, Tipo: variable, Línea: 20, Columna: 71
+Símbolo: INCREMENT, Valor: null, Tipo: Sin tipo, Línea: 20, Columna: 75
+Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 20, Columna: 81
+Símbolo: OPEN_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 21, Columna: 5
+Símbolo: WHILE, Valor: null, Tipo: Sin tipo, Línea: 23, Columna: 9
+Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 23, Columna: 18
+Símbolo: IDENTIFIER, Valor: _var2_, Tipo: variable, Línea: 23, Columna: 29
+Símbolo: GREATER_THAN, Valor: null, Tipo: Sin tipo, Línea: 23, Columna: 36
+Símbolo: FLOAT_LITERAL, Valor: 12.2, Tipo: Sin tipo, Línea: 23, Columna: 44
+Símbolo: OR, Valor: null, Tipo: Sin tipo, Línea: 23, Columna: 49
+Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 23, Columna: 56
+Símbolo: INT_LITERAL, Valor: 34, Tipo: Sin tipo, Línea: 23, Columna: 67
+Símbolo: PLUS, Valor: null, Tipo: Sin tipo, Línea: 23, Columna: 70
+Símbolo: INT_LITERAL, Valor: 33, Tipo: Sin tipo, Línea: 23, Columna: 78
+Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 23, Columna: 81
+Símbolo: GREATER_THAN, Valor: null, Tipo: Sin tipo, Línea: 23, Columna: 94
+Símbolo: INT_LITERAL, Valor: 12, Tipo: Sin tipo, Línea: 23, Columna: 102
+Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 23, Columna: 105
+Símbolo: OPEN_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 24, Columna: 9
+Símbolo: IDENTIFIER, Valor: _var_, Tipo: variable, Línea: 25, Columna: 13
+Símbolo: ASSIGN, Valor: null, Tipo: Sin tipo, Línea: 25, Columna: 19
+Símbolo: IDENTIFIER, Valor: _var_, Tipo: variable, Línea: 25, Columna: 27
+Símbolo: MINUS, Valor: null, Tipo: Sin tipo, Línea: 25, Columna: 33
+Símbolo: INT_LITERAL, Valor: 1, Tipo: Sin tipo, Línea: 25, Columna: 45
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 25, Columna: 47
+Símbolo: RETURN, Valor: null, Tipo: Sin tipo, Línea: 26, Columna: 13
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 26, Columna: 19
+Símbolo: CLOSE_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 27, Columna: 9
+Símbolo: IF, Valor: null, Tipo: Sin tipo, Línea: 30, Columna: 9
+Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 30, Columna: 14
+Símbolo: IDENTIFIER, Valor: _var_, Tipo: variable, Línea: 30, Columna: 25
+Símbolo: EQUAL, Valor: null, Tipo: Sin tipo, Línea: 30, Columna: 31
+Símbolo: INT_LITERAL, Valor: 0, Tipo: Sin tipo, Línea: 30, Columna: 36
+Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 30, Columna: 38
+Símbolo: OPEN_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 31, Columna: 9
+Símbolo: RETURN, Valor: null, Tipo: Sin tipo, Línea: 32, Columna: 13
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 32, Columna: 19
+Símbolo: CLOSE_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 33, Columna: 9
+Símbolo: ELSE, Valor: null, Tipo: Sin tipo, Línea: 34, Columna: 9
+Símbolo: OPEN_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 35, Columna: 9
+Símbolo: RETURN, Valor: null, Tipo: Sin tipo, Línea: 36, Columna: 13
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 36, Columna: 19
+Símbolo: CLOSE_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 37, Columna: 9
+Símbolo: SWITCH, Valor: null, Tipo: Sin tipo, Línea: 40, Columna: 9
+Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 40, Columna: 16
+Símbolo: IDENTIFIER, Valor: _ch_, Tipo: variable, Línea: 40, Columna: 27
+Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 40, Columna: 32
+Símbolo: OPEN_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 41, Columna: 9
+Símbolo: CASE, Valor: null, Tipo: Sin tipo, Línea: 42, Columna: 13
+Símbolo: INT_LITERAL, Valor: 1, Tipo: Sin tipo, Línea: 42, Columna: 22
+Símbolo: COLON, Valor: null, Tipo: Sin tipo, Línea: 42, Columna: 24
+Símbolo: IDENTIFIER, Valor: _id_, Tipo: variable, Línea: 42, Columna: 30
+Símbolo: INCREMENT, Valor: null, Tipo: Sin tipo, Línea: 42, Columna: 35
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 42, Columna: 41
+Símbolo: CASE, Valor: null, Tipo: Sin tipo, Línea: 43, Columna: 13
+Símbolo: INT_LITERAL, Valor: 2, Tipo: Sin tipo, Línea: 43, Columna: 22
+Símbolo: COLON, Valor: null, Tipo: Sin tipo, Línea: 43, Columna: 24
+Símbolo: IDENTIFIER, Valor: _id_, Tipo: variable, Línea: 43, Columna: 30
+Símbolo: DECREMENT, Valor: null, Tipo: Sin tipo, Línea: 43, Columna: 35
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 43, Columna: 42
+Símbolo: DEFAULT, Valor: null, Tipo: Sin tipo, Línea: 44, Columna: 13
+Símbolo: COLON, Valor: null, Tipo: Sin tipo, Línea: 44, Columna: 20
+Símbolo: IDENTIFIER, Valor: _id_, Tipo: variable, Línea: 44, Columna: 26
+Símbolo: ASSIGN, Valor: null, Tipo: Sin tipo, Línea: 44, Columna: 31
+Símbolo: IDENTIFIER, Valor: _id_, Tipo: variable, Línea: 44, Columna: 39
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 44, Columna: 44
+Símbolo: RETURN, Valor: null, Tipo: Sin tipo, Línea: 45, Columna: 13
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 45, Columna: 19
+Símbolo: CLOSE_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 47, Columna: 9
+Símbolo: CLOSE_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 48, Columna: 5
+Símbolo: RETURN, Valor: null, Tipo: Sin tipo, Línea: 49, Columna: 5
+Símbolo: INT_LITERAL, Valor: 1, Tipo: Sin tipo, Línea: 49, Columna: 11
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 49, Columna: 13
+Símbolo: CLOSE_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 50, Columna: 1
+Símbolo: MAIN, Valor: null, Tipo: main, Línea: 53, Columna: 1
+Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 53, Columna: 10
+Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 53, Columna: 21
+Símbolo: OPEN_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 53, Columna: 34
+Símbolo: READ, Valor: null, Tipo: Sin tipo, Línea: 59, Columna: 1
+Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 59, Columna: 9
+Símbolo: IDENTIFIER, Valor: _s1_, Tipo: variable, Línea: 59, Columna: 20
+Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 59, Columna: 25
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 59, Columna: 38
+Símbolo: PRINT, Valor: null, Tipo: Sin tipo, Línea: 61, Columna: 1
+Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 61, Columna: 7
+Símbolo: IDENTIFIER, Valor: _b1_, Tipo: variable, Línea: 61, Columna: 18
+Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 61, Columna: 23
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 61, Columna: 36
+Símbolo: IDENTIFIER, Valor: _miFunc_, Tipo: variable, Línea: 63, Columna: 1
+Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 63, Columna: 10
+Símbolo: IDENTIFIER, Valor: _miFunc_, Tipo: variable, Línea: 63, Columna: 21
+Símbolo: OPEN_PAREN, Valor: null, Tipo: Sin tipo, Línea: 63, Columna: 30
+Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 63, Columna: 41
+Símbolo: COMMA, Valor: null, Tipo: Sin tipo, Línea: 63, Columna: 54
+Símbolo: CHAR_LITERAL, Valor: a, Tipo: Sin tipo, Línea: 63, Columna: 55
+Símbolo: CLOSE_PAREN, Valor: null, Tipo: Sin tipo, Línea: 63, Columna: 59
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 63, Columna: 72
+Símbolo: RETURN, Valor: null, Tipo: Sin tipo, Línea: 64, Columna: 1
+Símbolo: IDENTIFIER, Valor: _bl1_, Tipo: variable, Línea: 64, Columna: 7
+Símbolo: END_STATEMENT, Valor: null, Tipo: Sin tipo, Línea: 64, Columna: 13
+Símbolo: CLOSE_BLOCK, Valor: null, Tipo: Sin tipo, Línea: 66, Columna: 1

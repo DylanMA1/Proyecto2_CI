@@ -23,6 +23,7 @@ non terminal asignacionArreglo, llamadaFuncion, argumentos, estructuraControl;
 non terminal ifElse, while, for, switch, casos, caso, io, operadorAritmetico, operadorRelacional;
 non terminal operadorLogico, operadorUnario, termino, booleano;
 non terminal expressionLogica, expressionRelacional, expressionAritmetica, expressionUnaria;
+non terminal asignacionFor, llamadaFuncionCompleta, expressionCompleta;
 
 // Precedencia y asociatividad
 precedence left OR;
@@ -33,6 +34,7 @@ precedence left PLUS, MINUS;
 precedence left MULTIPLY, DIVIDE, MODULO;
 precedence left POWER;
 precedence right NOT;
+precedence nonassoc END_STATEMENT;
 
 // Símbolo inicial
 start with program;
@@ -74,19 +76,21 @@ sentencias ::= sentencia
 sentencia ::= creacion
             | creacionAsign
             | asignacion
-            | llamadaFuncion
             | estructuraControl
             | io
             | arreglo
             | asignacionArreglo
             | returnStatement
-            | breakStatement;
+            | breakStatement
+            | llamadaFuncionCompleta;
 
 creacion ::= tipos IDENTIFIER END_STATEMENT;
 
 creacionAsign ::= tipos IDENTIFIER ASSIGN expression END_STATEMENT;
 
 asignacion ::= IDENTIFIER ASSIGN expression END_STATEMENT;
+
+asignacionFor ::= IDENTIFIER ASSIGN expression;
 
 literales ::= INT_LITERAL
             | FLOAT_LITERAL
@@ -105,8 +109,10 @@ returnStatement ::= RETURN expression END_STATEMENT
 
 breakStatement ::= BREAK END_STATEMENT;
 
-llamadaFuncion ::= IDENTIFIER OPEN_PAREN argumentos CLOSE_PAREN END_STATEMENT
-                 | IDENTIFIER OPEN_PAREN CLOSE_PAREN END_STATEMENT;
+llamadaFuncion ::= IDENTIFIER OPEN_PAREN argumentos CLOSE_PAREN
+                 | IDENTIFIER OPEN_PAREN CLOSE_PAREN;
+
+llamadaFuncionCompleta ::= llamadaFuncion END_STATEMENT;
 
 argumentos ::= expression
              | argumentos COMMA expression;
@@ -121,9 +127,7 @@ ifElse ::= IF OPEN_PAREN expression CLOSE_PAREN bloque ELSE bloque
 
 while ::= WHILE OPEN_PAREN expression CLOSE_PAREN bloque;
 
-for ::= FOR OPEN_PAREN asignacion COMMA expression COMMA asignacion CLOSE_PAREN bloque
-      | FOR OPEN_PAREN termino COMMA expression COMMA termino CLOSE_PAREN bloque
-      | FOR OPEN_PAREN asignacion COMMA expression COMMA expression CLOSE_PAREN bloque;
+for ::= FOR OPEN_PAREN asignacionFor COMMA expression COMMA expression CLOSE_PAREN bloque;
 
 switch ::= SWITCH OPEN_PAREN expression CLOSE_PAREN OPEN_BLOCK casos CLOSE_BLOCK;
 
@@ -131,6 +135,8 @@ casos ::= caso
         | casos caso;
 
 caso ::= CASE expression COLON sentencias
+       | CASE expression COLON expressionCompleta
+       | DEFAULT COLON expressionCompleta
        | DEFAULT COLON sentencias;
 
 io ::= PRINT OPEN_PAREN expression CLOSE_PAREN END_STATEMENT
@@ -141,6 +147,8 @@ booleano ::= BOOL_LITERAL | TRUE | FALSE;
 expression ::= expression operadorLogico expression
              | expression operadorRelacional expression
              | expressionAritmetica;
+
+expressionCompleta ::= expression END_STATEMENT;
 
 expressionLogica ::= expressionLogica operadorLogico expressionRelacional
                    | expressionRelacional;

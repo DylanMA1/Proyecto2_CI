@@ -5,19 +5,28 @@ abrecuento
     cupido _miChar_ entrega '!' finregalo
     cometa _str1_ entrega "Hola $%&/gaspar$& cierraregalo mundo" finregalo
     bromista _fl1_ entrega 56.6 finregalo
-    trueno _arr_ abreempaque 10 cierraempaque finregalo
-    trueno _mibool_ entrega true finregalo
 
+    rodolfo _lit_ entrega 2 finregalo
+
+    # Esto está malo (voy a tratar de arreglar este desde mi pc)
+    # cupido _arr_ abreempaque _lit_ cierraempaque entrega abrecuento 'c','d' cierracuento finregalo
+    #
+
+    _arr_ abreempaque _lit_ cierraempaque entrega 'c' finregalo
+
+    trueno _mibool_ entrega true finregalo
     _mibool_ entrega abreregalo 3.7 nochebuena _fl1_ quien cierraregalo snowball 56 melchor true finregalo
 
-    duende abreregalo _i_ entrega 10 finregalo, _i_ snowball 30 , _i_ quien cierraregalo
+    duende abreregalo _i_ entrega 10 , _i_ snowball 30 nochebuena 2 , _i_ quien cierraregalo
     abrecuento
-
+        # Esto esta bueno
         envuelve abreregalo _var2_ minstix 12.2 gaspar abreregalo 34 navidad 33 cierraregalo minstix 12 cierraregalo
         abrecuento
             _var_ entrega _var_ intercambio 1 finregalo
+            envia finregalo
         cierracuento
 
+        # Esto esta bueno
         elfo abreregalo _var_ mary 0 cierraregalo
         abrecuento
             envia finregalo
@@ -27,20 +36,31 @@ abrecuento
             envia finregalo
         cierracuento
 
+        # Esto esta malo
         varios abreregalo _ch_ cierraregalo
         abrecuento
-            historia 1 sigue narra abreregalo _id_ cierraregalo finregalo
-            historia 2 sigue narra abreregalo _id_ cierraregalo finregalo
-            ultimo sigue narra abreregalo _id_ cierraregalo finregalo
+            historia 1 sigue _id_ quien finregalo
+            historia 2 sigue _id_ grinch finregalo
+            ultimo sigue _id_ entrega _id_ finregalo
+            # envia finregalo
+            # comente envia finregalo, no tenia sentido
         cierracuento
     cierracuento
+    envia 1 finregalo
 cierracuento
 
-_verano_ abreregalo cierraregalo
-abrecuento
-    bromista _b1_ entrega 17.8 finregalo
-    rodolfo _s1_ entrega 18 finregalo
+# Esto está bueno
+_verano_ abreregalo cierraregalo abrecuento
 
-    escucha abreregalo _s1_ cierraregalo finregalo
-    narra abreregalo _b1_ cierraregalo finregalo
+\_
+Comentario 1
+_/
+
+escucha abreregalo _s1_ cierraregalo finregalo
+
+narra abreregalo _b1_ cierraregalo finregalo
+
+_miFunc_ abreregalo _miFunc_ abreregalo cierraregalo ,'a' cierraregalo finregalo
+envia _bl1_ finregalo
+
 cierracuento
