@@ -24,6 +24,7 @@ non terminal ifElse, while, for, switch, casos, caso, io, operadorAritmetico, op
 non terminal operadorLogico, operadorUnario, termino, booleano;
 non terminal expressionLogica, expressionRelacional, expressionAritmetica, expressionUnaria;
 non terminal asignacionFor, llamadaFuncionCompleta, expressionCompleta;
+non terminal creacionAsignArreglo;
 
 // Precedencia y asociatividad
 precedence left OR;
@@ -62,7 +63,9 @@ paramAux ::= parametro
 
 parametro ::= tipos IDENTIFIER;
 
-bloque ::= OPEN_BLOCK sentencias CLOSE_BLOCK;
+bloque ::= OPEN_BLOCK  sentencias CLOSE_BLOCK
+        | OPEN_BLOCK argumentos CLOSE_BLOCK;
+
 
 tipos ::= INTEGER
        | FLOAT
@@ -78,7 +81,7 @@ sentencia ::= creacion
             | asignacion
             | estructuraControl
             | io
-            | arreglo
+            | creacionAsignArreglo
             | asignacionArreglo
             | returnStatement
             | breakStatement
@@ -98,11 +101,13 @@ literales ::= INT_LITERAL
             | STRING_LITERAL
             | CHAR_LITERAL;
 
-arreglo ::= tipos IDENTIFIER OPEN_BRACKET INT_LITERAL CLOSE_BRACKET END_STATEMENT;
+creacionAsignArreglo ::= tipos IDENTIFIER OPEN_BRACKET expression CLOSE_BRACKET END_STATEMENT
+          | tipos IDENTIFIER OPEN_BRACKET expression CLOSE_BRACKET ASSIGN bloque END_STATEMENT;
 
 accesoArreglo ::= IDENTIFIER OPEN_BRACKET expression CLOSE_BRACKET;
 
-asignacionArreglo ::= accesoArreglo ASSIGN expression END_STATEMENT;
+asignacionArreglo ::= accesoArreglo ASSIGN expression END_STATEMENT
+                    | IDENTIFIER OPEN_BRACKET CLOSE_BRACKET ASSIGN bloque END_STATEMENT;
 
 returnStatement ::= RETURN expression END_STATEMENT
                  | RETURN END_STATEMENT;
