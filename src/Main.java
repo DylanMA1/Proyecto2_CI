@@ -111,14 +111,12 @@ public class Main {
     private static void validateSyntax(String filePath) {
         try (FileReader reader = new FileReader(filePath)) {
             Lexer lexer = new Lexer(reader);
+            lexer.desactivarImpresionErrores();
             Parser parser = new Parser(lexer);
             parser.parse();
-            System.out.println("El archivo es válido según la gramática definida.");
+            System.out.println("Análisis completado.");
         } catch (Exception e) {
-            System.err.println("Error de análisis sintáctico: " + e.getMessage());
-            if (e.getCause() != null) {
-                System.err.println("Causa del error: " + e.getCause());
-            }
+            System.err.println("Error durante el análisis: " + e.getMessage());
         }
     }
 
